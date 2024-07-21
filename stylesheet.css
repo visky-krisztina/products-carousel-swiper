@@ -1,0 +1,272 @@
+:root {
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: #94a3b8;
+	--clr-grey-3: #e2e8f0;
+	--clr-white: #fff;
+	--ff-primary: "Roboto", sans-serif;
+	--ff-secondary: "Open Sans", sans-serif;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Calibri;
+}
+
+body {
+	font-family: var(--ff-secondary);
+	background: var(--clr-white);
+	color: var(--clr-grey-1);
+	line-height: 1.5;
+	font-size: 0.875rem;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.section {
+	width: 50rem;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.slider2-main-container {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.swiper-container {
+	width: 100%;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.card2 {
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	flex-direction: row;
+	border: 2px solid var(--clr-grey-3);
+	border-radius: 5px;
+	background: var(--clr-white);
+	margin: 10px;
+}
+
+.card2:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img-container {
+	width: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container img {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	margin-left: 3rem;
+}
+
+.card-content {
+	width: 100%;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.icon-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	margin-top: -2rem;
+	padding-right: 3rem;
+	gap: 10px;
+}
+
+.shopping-cart-icon {
+	fill: #ffffff;
+	width: 24px;
+	height: 24px;
+}
+
+.expand-icon {
+	margin-top: 0.5rem;
+	fill: #000;
+	width: 2rem;
+}
+.heart-icon {
+	width: 3rem;
+	cursor: pointer;
+	fill: black;
+	transition: fill 0.3s;
+}
+
+/* Class for red heart when clicked */
+.heart-icon.filled {
+	fill: red;
+}
+
+.heart-icon.unfilled {
+	fill: black;
+}
+
+.product-title {
+	height: 2.5rem;
+	text-wrap: wrap;
+	font-size: 1.7rem;
+	text-align: left;
+}
+.price-container {
+	height: auto;
+}
+.product-price {
+	display: flex;
+	flex-direction: column;
+}
+
+.next-to-each-other {
+	display: flex;
+	flex-direction: row;
+}
+#original-price {
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: line-through;
+	text-decoration-color: #ff3a68;
+	margin-left: 0.2rem;
+}
+
+#discounted-price {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #ff3a68;
+	margin-left: 0.4rem;
+}
+
+#delivery {
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.add-cart {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 15rem;
+	margin: 0 auto;
+	height: 3rem;
+	background-color: black;
+	color: white;
+	border-radius: 0.2rem;
+	border: transparent;
+	font-size: 1.3rem;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+#cart-text {
+	margin-left: 0.5rem;
+}
+
+@media (max-width: 992px) {
+	.section {
+		width: 40rem;
+	}
+
+	.product-title {
+		font-size: 1.5rem;
+	}
+
+	#original-price,
+	#discounted-price {
+		font-size: 1.5rem;
+	}
+
+	.add-cart {
+		width: 10rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.section {
+		width: 35rem;
+	}
+
+	.product-title {
+		font-size: 1.3rem;
+	}
+
+	#original-price,
+	#discounted-price {
+		font-size: 1.3rem;
+	}
+
+	.add-cart {
+		width: 8rem;
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.section {
+		width: 90%;
+		padding: 1rem;
+	}
+	.card2 {
+		width: 25rem;
+	}
+	.img-container img {
+		width: 70%;
+	}
+
+	.product-title {
+		font-size: 1rem;
+	}
+
+	#original-price,
+	#discounted-price {
+		font-size: 1rem;
+	}
+
+	.add-cart {
+		width: 6rem;
+		font-size: 0.7rem;
+	}
+}
+
+@media (max-width: 370px) {
+	.section {
+		width: 60%;
+		padding: 0.3rem;
+	}
+	.card2 {
+		width: 10rem;
+	}
+	.img-container img {
+		width: 50%;
+	}
+}
